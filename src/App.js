@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import './assets/css/ccwork.css';
+import './assets/css/font-ccwork.css';
+import Login from './Pages/Login/login'
+import MessageBoard from './Pages/Message-board/message-board';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, Outlet, useLocation } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='Login' element={<Login />}></Route>
+      <Route path='MessageBoard' element={<MessageBoard />}></Route>
+    </Routes>
   );
 }
 

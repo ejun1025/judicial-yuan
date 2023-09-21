@@ -1,0 +1,132 @@
+﻿.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        display: block;
+        width: 175px; 
+    }
+
+    &__title {
+        text-align: center;
+        width: 177px;
+        margin: 20px 0 40px 0;
+        font-size: 2.4rem;
+        color: #666;
+        letter-spacing: 0.5rem;
+    }
+
+    &__input {
+        box-sizing: border-box;
+        padding: 0 20px;
+        margin-bottom: 35px;
+        border: 1px solid #887e7e;
+        border-radius: 5px;
+        width: 330px;
+        height: 60px;
+        background-color: transparent;
+        font-size: 1rem;
+        color: #635c5c;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__row {
+        box-sizing: border-box;
+        margin-bottom: 40px;
+        width: 330px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &__checkbox {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: #635c5c;
+
+        input {
+            display: none;
+
+            &:checked + .icon-checkbox {
+                border-color: #007aff;
+
+                svg polyline {
+                    stroke: #007aff;
+                }
+            } 
+        }
+    }
+
+    &__link {
+        cursor: pointer;
+        font-size: 16px;
+        color: #635c5c;
+        transition: all .3s;
+
+        &:hover {
+            color: #007aff;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        display: block;
+        width: 330px;
+        height: 60px;
+        background-color: #254a7d;
+        text-align: center;
+        line-height: 60px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 2.4rem;
+
+        &:hover {
+            color: #fff;
+            opacity: .7;
+        }
+    }
+
+    .icon-checkbox {
+        margin-right: 10px;
+        position: relative;
+        box-sizing: border-box;
+        border: 1px solid #887e7e;
+        border-radius: 5px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 22px;
+        height: 22px;
+        transition: all .3s;
+
+        svg {
+            top: 0px;
+            left: 1px;
+            position: absolute;
+            overflow: visible;
+            width: 24px;
+            height: 24px;
+
+            polyline {
+                transition: all .3s;
+                fill: none;
+                stroke: transparent;
+                stroke-width: 1;
+            }
+        }
+    }
+}
